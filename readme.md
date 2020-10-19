@@ -1,1 +1,2 @@
-This is a useless file written by Riel , He is learning how to use git
+### 这个仓库用来上传i-zuel的笔记和代码。
+
