@@ -70,7 +70,6 @@
 
   
 
-
 **doget和dopost区别：**
 
 - doget() 和 dopost() 分别对应 http 协议中的 GET 和 POST 方法
