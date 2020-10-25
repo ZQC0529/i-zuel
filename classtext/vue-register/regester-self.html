@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>register</title>
+</head>
+<body>
+
+	<div id="app">
+		<form>
+			<div id="register-username">
+				<label>用户名</label>
+				<input v-model="form.username" @blur="validField('username')">
+				<span style="color: red" v-if="message.username.show">
+					{{message.username.msg}}
+				</span>
+			</div>
+
+			<div id="register-email">
+				<label>邮箱</label>
+				<input type="text" v-model="form.email" @blur="validField('email')">
+				<span></span>
+			</div>
+		</form>
+	</div>
+</body>
+
+
+<script src="vue.js"></script>
+<script type="text/javascript">
+	const app = new Vue({
+		el:'#app',
+		data:{
+			form:{
+				username:'',
+				email:''
+			},
+		},//data
+		methods:{
+			validField(name){
+				this.message[name].show=false	//初始化show
+				this.message[name].msg=''		//初始化msg
+				if (!this.form[name].show){
+					//如果用户没有填写表单的信息，则需要弹出提示信息
+				}	
+			}	
+		}
+	})
+</script>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>注册</title>
+</head>
+<body>
+<div id="app">
+  <form>
+    <div>
+      <label>用户名</label>
+      <input v-model="form.username" @blur="validField('username')">
+      <span style="color: red" v-if="message.username.show">{{message.username.msg}}</span>
+    </div>
+    <div>
+      <label>邮箱</label>
+      <input v-model="form.email"
+             @blur="validField('email')">
+      <span style="color: red" v-if="message.email.show">{{message.email.msg}}</span>
+    </div>
+
+    <button type="button" @click="submit">提交</button>
+  </form>
+</div>
+</body>
+<script src="vue.js"></script>
+<script type="text/javascript">
+const app = new Vue({
+  el: '#app',
+  data: {
+    form: {
+      username: '',
+      email: ''
+    },
+    message: {
+      username: {
+        zw: '用户名',
+        show: false,
+        msg: ''
+      },
+      email: {
+        zw: '邮箱',
+        show: false,
+        msg: '',
+        reg:'^((13[0-9])|(14[5,7])|(15[0-3,5-9])|(17[0,3,5-8])|(18[0-9])|166|198|199|(147))\\d{8}$'
+      }
+    }
+  },
+  methods: {
+    validField(name) {
+      this.message[name].show = false
+      this.message[name].msg = ''
+      if (!this.form[name]) {
+        this.message[name].show = true
+        this.message[name].msg = `${this.message[name].zw}不能为空`
+        return false
+      }
+      if (this.message[name].reg) {
+        const a = eval(`/${this.message[name].reg}/`)
+        if (!a.test(this.form[name])) {
+          this.message[name].show = true
+          this.message[name].msg = `请输入正确的${this.message[name].zw}`
+          return false
+        }
+      }
+      return true
+    },
+    submit() {
+      for (let key in this.form) {
+        if (!this.validField(key)) {
+          return false
+        }
+      }
+      console.log('恭喜您，可以提交')
+    }
+  }
+})
+</script>
+</html>

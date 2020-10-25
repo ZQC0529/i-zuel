@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
+   <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+   <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+	<title>register</title>
+	<style type="text/css">
+	.login-box{
+		height: 500px;
+		width: 500px;
+		/*background-color: blue;*/
+/*	    margin-top: 10%;
+   		margin-left: 34%;
+*/		border: 1px solid black;
+		background-color: #00ffdc78;
+		opacity: 0.6
+
+	}	
+
+	.login-title{
+		height: 111px;
+		width: 100%;
+		/*background-color:pink;*/
+		justify-content: center;
+		display: flex;
+		border-bottom: 1px solid white
+
+	}
+
+	label{
+		font-size: 19px;
+		margin-left: 17%;
+		display: inline-block;
+		text-align: center;
+	}
+	input{
+		margin-top: 27px;
+		height: 19px
+	}
+	form{
+		margin: auto;
+	}
+
+	.title{
+		font-size: 47px
+	}
+	body{
+		background: url(img/bg2.png) center 0;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			
+			<div class="col-xs-6 col-sm-3">
+				
+	<div class="login-box">
+		<div class="login-title">
+			<!-- 标题 -->
+			<p class="title">注册页面</p>
+
+		</div>	
+
+		<form>
+		<div>
+			<label>用户名</label>
+			<input type="text" name="username"><br>
+			<label>账号</label>	
+			<input type="text" name="userid"><br>
+			<label>密码</label>
+			<input type="password" name="userpwd"><br>
+			<label>邮箱</label>
+			<input type="text" name="email"><br>
+			<label>手机号</label>
+			<input type="text" name="usermobile"><br>
+			<label>身份证号</label>
+			<input type="text" name="perid"><br>
+		</div>			
+		</form>
+
+		<button type="button" class="registerB" onclick="submit()">注册</button>
+		<button type="button" class="registerR" onclick="submit()">重置</button>
+			</div> 
+
+
+
+
+			</div>
+		</div> 
+	</div>
+</body>
+</html>
