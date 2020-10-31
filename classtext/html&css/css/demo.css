@@ -1,0 +1,92 @@
+.navigation{
+    /*background-color: blue;*/
+    height: 1000px;
+    width: 22%;
+    margin-top: 2%;
+}
+
+
+.item-box{
+	/*background-color: blue;*/
+    height: 732px;
+    width: 70%;
+    float: left;
+    margin-top: 2%;
+    border: thick double #32a1ce
+}
+
+.top-box{
+	background-color: #70a8d24f;
+    height: 100px;
+    width: 101%;
+}
+
+.title{
+	border: 5px solid blue;
+}
+
+.first{
+	width: 60px;
+}
+
+.top-icon{
+    height: 41px;
+    width: 27%;
+    margin-left: 90%;
+    margin-top: -2%;
+
+}
+.exit{
+    width: 105px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    float: right;
+    border: 1px solid #269ABC;
+    outline: none;
+    color: #fff;
+    background-color: #0034ff;
+    position: absolute;
+    opacity: 0.3;
+}
+
+.exit:hover{
+	opacity: 1;
+}
+
+td{
+	border: thick solid black;
+	width: 89px;
+    text-align: center;
+}
+
+
+tr{
+	line-height: 40px;
+}
+
+body{
+	background: url(../img/bg2.png) center 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+li{
+    font-family: serif;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+li:hover{
+	background-color: blue;
+	font-size: 30px;
+}
+
+
+
+
+/*.check{
+	margin-left: 29%;
+}*/
