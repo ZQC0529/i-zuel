@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>exercise</title>
+	<style type="text/css">
+		
+	.oldclass{ color:red;}
+	.newclass{ color:blue;}
+
+	</style>
+	<script type="text/javascript">
+		function a(){
+			const color = document.getElementById('old')
+			color.className = "newclass"
+			color.innerHTML="新文本"
+			color.style.color="purple"
+			color.style.fontSize="50px"
+			const img = document.getElementById('img')
+			img.src="img/bg2.png"
+		}
+	</script>
+</head>
+<body>
+	<h2 id="old" class="oldclass" style="font-weight:bold">旧文本</h2>
+	<img id="img" src="static/bc.ipg">
+	<button type="button" onclick="a()" style="width: 200px;height: 100px; font-weight:bold;font-size: 20px">Click me！</button>
+
+
+</body>
+</html>

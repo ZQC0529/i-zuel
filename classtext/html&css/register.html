@@ -2,6 +2,13 @@
 <html>
 <head>
 	<title>register</title>
+
+	<script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/messages_zh.js"></script>
+    <script src="js/additional-methods.js"></script>
+
 	<style type="text/css">
 	.login-box{
 		height: 500px;
@@ -48,7 +55,107 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 	}
+	span{
+		color: red;
+		display:none;
+	}
+	button{
+    height: 33px;
+    width: 66px;
+	}
 	</style>
+
+
+	<script type="text/javascript">
+
+		$(registerForm).validate
+
+
+
+
+
+
+		$(document).ready(function(){
+
+		
+		$("#register").click(function(){
+
+
+			let errorMsg=""
+			const username = document.getElementById('username').value
+			const userEmail = document.getElementById('email').value
+			const userid = document.getElementById('userid').value
+			const usermobile = document.getElementById('usermobile').value
+
+			const regMobile = /^1[3|4|5|8][0-9]\d{4,8}$/
+			const regEmail = /^\w+@[a-z0-9]+(\.[a-z]+){1,3}$/
+			if (usermobile == "") {
+				errorMsg="手机号不能为空!"
+				alert(errorMsg)
+			}else{
+				if (!regMobile.test(usermobile)) {
+					errorMsg="手机号格式不符合规范"
+					alert(errorMsg)
+
+				}
+				
+			}
+
+
+			if (userEmail == "") {
+				errorMsg="邮箱不能为空"
+				alert(errorMsg)
+
+			}else{
+				if(!regEmail.test(userEmail)){
+					errorMsg="邮箱格式不符合规范"
+					alert(errorMsg)
+				}else{
+					return
+				}
+			}
+
+
+
+		})
+		})
+
+		function validator() {
+			let errorMsg=""
+			const username = document.getElementById('username').value
+			const userEmail = document.getElementById('email').value
+			const userid = document.getElementById('userid').value
+			const usermobile = document.getElementById('usermobile').value
+
+			const regMobile = /^1[3|4|5|8][0-9]\d{4,8}$/
+			const regEmail = /^\w+@[a-z0-9]+(\.[a-z]+){1,3}$/
+			if (usermobile == "") {
+				errorMsg="手机号不能为空!"
+				alert(errorMsg)
+			}else{
+				if (!regMobile.test(usermobile)) {
+					errorMsg="手机号格式不符合规范"
+					alert(errorMsg)
+
+				}
+				
+			}
+
+
+			if (userEmail == "") {
+				errorMsg="邮箱不能为空"
+				alert(errorMsg)
+
+			}else{
+				if(!regEmail.test(userEmail)){
+					errorMsg="邮箱格式不符合规范"
+					alert(errorMsg)
+				}else{
+					return
+				}
+			}
+		}
+	</script>
 </head>
 <body>
 
@@ -59,25 +166,27 @@
 
 		</div>	
 
-		<form>
+		<form id="registerForm">
 		<div>
 			<label>用户名</label>
-			<input type="text" name="username"><br>
+			<input type="text" id="username" name="username"><span>12333333333</span><br>
 			<label>账号</label>	
-			<input type="text" name="userid"><br>
+			<input type="text" id="userid"  name="userid"><span>12333333333</span><br>
 			<label>密码</label>
-			<input type="password" name="userpwd"><br>
+			<input type="password" id="userpwd" name="userpwd"><span>12333333333</span><br>
 			<label>邮箱</label>
-			<input type="text" name="email"><br>
+			<input type="text" id="email" name="email"><span>12333333333</span><br>
 			<label>手机号</label>
-			<input type="text" name="usermobile"><br>
+			<input type="text" id="usermobile" name="usermobile"><span>12333333333</span><br>
 			<label>身份证号</label>
-			<input type="text" name="perid"><br>
+			<input type="text" name="perid"><span>12333333333</span><br>
+			<button type="button" id="register" class="registerB" style="margin-left: 36%;margin-top: 5%;" >注册</button>
+			<button type="reset" class="registerR" >重置</button>
 		</div>			
 		</form>
 
-		<button type="button" class="registerB" onclick="submit()">注册</button>
-		<button type="button" class="registerR" onclick="submit()">重置</button>
+
 			</div> 
 </body>
+
 </html>
