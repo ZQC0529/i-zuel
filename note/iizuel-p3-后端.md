@@ -31,7 +31,7 @@
 
 
 
-<font color="yellow" size="5">需要做的事</font>
+<font color="yellow" size="6">**需要做的事</font>**
 
  看vue，ant design
 
@@ -63,15 +63,45 @@ QRcode 是携带信息的，唯一且不同。发请求的时候当前请求会�
 
 第一次请求时，会给一个携带唯一==uuid== 的二维码。ajax每秒拿着这个uuid（默认为null）去请求服务端。服务端每秒钟拿uuid去 检测数据库，判断当前是否有用户登录。数据库的每条记录都会有一条uuid。
 
-
-
-JFINAL中可以判断
-
-
-
-
-
 - [ ] 将图片转为BASE64
 - [ ] BufferReader
 - [ ] PUI
 - [ ] JAVA中的final
+
+
+
+---
+
+
+
+<font color="yellow" size="6">作业</font>
+
+- <font color="white" size="4">前端</font>：学会Axios的用法
+
+  在班级管理层面有一个
+
+  注册和添加用户
+
+  学会使用 ant design的 menu
+
+
+
+- **<font color="white" size="4">服务端</font>**：在今日的基础上，把今天的过一遍。Controller对参数的接受
+
+  在Controller如何rander一个JSON出来。
+
+  返回：msg，time，data
+
+  - 看如何在Action里面接收参数，通过getPara也行，但是可以通过形参
+  - 配合前端的同学完成增删改查，为他们提供接口
+  - 看InterCeptor 拦截器的用法
+  - 自己写接收文件和上传文件
+  - 学会数据库事务操作（添加一张表，名字为班级表。事务体现在删除一张表的时候，将班级所有同学都删除了**（注意是逻辑删除！）**）
+
+  
+
+  部门字段：
+
+  - 部门名
+
+  在用户表中增加一个：部门id
