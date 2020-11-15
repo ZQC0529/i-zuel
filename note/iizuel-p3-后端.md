@@ -28,10 +28,19 @@
   - 静态方法能且只能够通过类名直接调用
 - 不要用user.dao做事，应该用user.dao.find返回回来的对象去做事
 - 所有 sql 与业务逻辑写在 Service 中，不要放在 Model 中，更不要放在 Controller 中，养成好习惯，有利于大型项目的开发与维护
+- Controller在每次启动服务器的时候就会自动实例化**一个**Controller对象。而不是有一个用户请求就为它new一个Controller对象。
+
+- 当if语句中出现return时，可以不用写else
+
+  
+
+---
 
 
 
-<font color="yellow" size="6">**需要做的事</font>**
+
+
+<font color="yellow" size="6">需要做的事</font>
 
  看vue，ant design
 
@@ -49,7 +58,7 @@
 
 ## JFINAL
 
-看 getBean和getMod
+看 getBean和getModel
 
 包装类和基本类。封箱和装箱
 
@@ -105,3 +114,12 @@ QRcode 是携带信息的，唯一且不同。发请求的时候当前请求会�
   - 部门名
 
   在用户表中增加一个：部门id
+
+---
+
+
+
+问问师兄hashMap的问题
+
+为什么在Action中不render就会报错
+

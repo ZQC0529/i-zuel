@@ -81,6 +81,9 @@
 - get的参数就放在url上面，不安全
 - post比get更够上传的数据量更大
 - POST 比 GET 安全；由Web浏览器或通过HTML、JSP直接访问Servlet的URL时，一般用GET调用。GET 调用会把传递给Servlet的参数在 URL 里显示出来，这样对系统安全方面存在问题；而 POST 请求则通过其他流传递参数，不会在 URL 中显示，更安全；例如用户登录时，如果是用 GET 调用会把用户账号密码都显示在 URL 中，用 POST 调用则不会显示。
+- get的参数长度是由于url的长度有限而受限。因为get请求的参数会跟在u
+- 在JFINAL中，可以通过setMaxPostSize() 设置参数大小，在传送文件时
+  - J
 
 
 
